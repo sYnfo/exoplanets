@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v4/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#canvas {
+    position:absolute;
+    overflow:hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#description {
+    font-family: SourceSansPro, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0px;
+    width: 25em;
+    margin: 1em;
+}
+
+#description a:link {
+    color: black;
+}
+
+#description a:visited {
+    color: black;
+}
