@@ -1,0 +1,5 @@
+#!/bin/bash
+wget -O /var/www/kepler/data/exoplanets.csv http://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets
+/usr/bin/python '/var/www/kepler/data/parse_planets.py'
+sed -i "s/Currently\ [0-9]*/Currently\ $(expr $(fgrep -o ',' '/var/www/kepler/js/planets.js' | wc -l) / 4)/" '/var/www/kepler/index.html'
+sed -i "s/updated\ [a-zA-Z]\+\ [0-9]\+,\ [0-9]\{4\}/updated\ $(date +"%b %d, %Y")/" '/var/www/kepler/index.html'
